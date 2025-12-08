@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     const classes = [];
     for (const id of classIds) {
       const classData = await kv.hgetall(`class:${id}`);
-      if (classData && classData.isActive === 'true') {
+      if (classData && (classData.isActive === 'true' || classData.isActive === true)) {
         classes.push({
           id,
           name: classData.name,

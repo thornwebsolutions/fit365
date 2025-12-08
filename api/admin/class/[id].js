@@ -78,7 +78,7 @@ export default async function handler(req, res) {
         description: classData.description,
         capacity: parseInt(classData.capacity),
         spotsRemaining: parseInt(classData.spotsRemaining),
-        isActive: classData.isActive === 'true',
+        isActive: classData.isActive === 'true' || classData.isActive === true,
         rsvps
       });
     }
@@ -109,7 +109,7 @@ export default async function handler(req, res) {
         description: description !== undefined ? description : existingClass.description,
         capacity: (capacity || existingClass.capacity).toString(),
         spotsRemaining: spotsRemaining.toString(),
-        isActive: (isActive !== undefined ? isActive : existingClass.isActive === 'true').toString()
+        isActive: (isActive !== undefined ? isActive : (existingClass.isActive === 'true' || existingClass.isActive === true)).toString()
       };
 
       await kv.hset(`class:${id}`, updatedData);

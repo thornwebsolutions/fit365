@@ -59,7 +59,7 @@ export default async function handler(req, res) {
             description: classData.description,
             capacity: parseInt(classData.capacity),
             spotsRemaining: parseInt(classData.spotsRemaining),
-            isActive: classData.isActive === 'true',
+            isActive: classData.isActive === 'true' || classData.isActive === true,
             rsvpCount
           });
         }
