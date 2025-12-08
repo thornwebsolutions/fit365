@@ -1,0 +1,9 @@
+{
+  "name": "fit365",
+  "version": "1.0.0",
+  "description": "FIT365 - Premier Fitness Center & Event Showroom",
+  "dependencies": {
+    "@vercel/kv": "^1.0.1",
+    "resend": "^2.1.0"
+  }
+}

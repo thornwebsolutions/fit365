@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.fit4thekingdom365.org)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

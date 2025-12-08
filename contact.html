@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact FIT365 - Get in touch about memberships, fitness programs, event bookings, or general inquiries. Located in Blythewood, SC.">
+    <title>Contact Us - FIT365 Premier Fitness Center & Event Showroom</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="header__logo">
+                    <span class="header__logo-text">FIT<span class="text-secondary">365</span></span>
+                </a>
+
+                <nav class="nav" id="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="fitness.html" class="nav__link">Fitness</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="classes.html" class="nav__link">Classes</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">Events</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link nav__link--active">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="btn btn--primary nav__cta">Join Now</a>
+                </nav>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="mobile-menu-toggle__bar"></span>
+                    <span class="mobile-menu-toggle__bar"></span>
+                    <span class="mobile-menu-toggle__bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="hero page-hero">
+            <div class="hero__background-placeholder">
+                <span>[Hero Image: Welcoming facility entrance]</span>
+            </div>
+            <div class="container">
+                <div class="hero__content text-center" style="max-width: 100%;">
+                    <nav class="breadcrumb">
+                        <a href="index.html" class="breadcrumb__link">Home</a>
+                        <span class="breadcrumb__separator">/</span>
+                        <span class="breadcrumb__current">Contact</span>
+                    </nav>
+                    <h1 class="hero__title">Get in Touch</h1>
+                    <p class="hero__description">
+                        We'd love to hear from you. Reach out with questions about memberships, programs, events, or anything else.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info Cards Section -->
+        <section class="section">
+            <div class="container">
+                <div class="contact-cards grid grid-4 gap-lg">
+                    <div class="contact-card card fade-in">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                        <h4 class="contact-card__title">Visit Us</h4>
+                        <div class="contact-card__info">
+                            <p>123 Main Street</p>
+                            <p>Blythewood, SC 29016</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card card fade-in">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                        </div>
+                        <h4 class="contact-card__title">Call Us</h4>
+                        <div class="contact-card__info">
+                            <p><a href="tel:+1234567890">(123) 456-7890</a></p>
+                            <p class="text-light">Mon-Fri: 5am - 10pm</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card card fade-in">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <h4 class="contact-card__title">Email Us</h4>
+                        <div class="contact-card__info">
+                            <p><a href="mailto:info@fit365.com">info@fit365.com</a></p>
+                            <p><a href="mailto:events@fit365.com">events@fit365.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card card fade-in">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                            </svg>
+                        </div>
+                        <h4 class="contact-card__title">Hours</h4>
+                        <div class="contact-card__info">
+                            <p>Mon-Fri: 5am - 10pm</p>
+                            <p>Sat-Sun: 7am - 8pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Map Section -->
+        <section class="section section--alt">
+            <div class="container">
+                <div class="grid grid-2 gap-xl">
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper fade-in">
+                        <span class="section-header__subtitle">Send a Message</span>
+                        <h2>Contact Form</h2>
+                        <p class="mb-xl">
+                            Have a question or want to learn more? Fill out the form below and we'll get back to you as soon as possible.
+                        </p>
+
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row grid grid-2 gap-md">
+                                <div class="form-group">
+                                    <label for="contactName" class="form-label form-label--required">Your Name</label>
+                                    <input type="text" id="contactName" name="name" class="form-input" placeholder="John Doe" required>
+                                    <span class="form-error">Please enter your name</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactEmail" class="form-label form-label--required">Email Address</label>
+                                    <input type="email" id="contactEmail" name="email" class="form-input" placeholder="john@example.com" required>
+                                    <span class="form-error">Please enter a valid email</span>
+                                </div>
+                            </div>
+
+                            <div class="form-row grid grid-2 gap-md">
+                                <div class="form-group">
+                                    <label for="contactPhone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="contactPhone" name="phone" class="form-input" placeholder="(123) 456-7890">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactSubject" class="form-label form-label--required">Subject</label>
+                                    <select id="contactSubject" name="subject" class="form-select" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="membership">Membership Inquiry</option>
+                                        <option value="programs">Programs & Classes</option>
+                                        <option value="events">Event Booking</option>
+                                        <option value="general">General Question</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <span class="form-error">Please select a subject</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMessage" class="form-label form-label--required">Your Message</label>
+                                <textarea id="contactMessage" name="message" class="form-textarea" placeholder="How can we help you?" required></textarea>
+                                <span class="form-error">Please enter your message</span>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--lg">Send Message</button>
+
+                            <div class="form-success" id="contactFormSuccess">
+                                Thank you for your message! We'll get back to you within 24-48 hours.
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Map Section -->
+                    <div class="contact-map-wrapper fade-in">
+                        <span class="section-header__subtitle">Find Us</span>
+                        <h2>Our Location</h2>
+                        <p class="mb-xl">
+                            Conveniently located in the heart of Blythewood, SC. Stop by for a tour!
+                        </p>
+
+                        <div class="map-placeholder">
+                            <div style="text-align: center;">
+                                <svg viewBox="0 0 24 24" fill="var(--color-text-light)" width="48" height="48" style="margin-bottom: var(--space-md);">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <p>[Google Maps Embed]</p>
+                                <p>123 Main Street, Blythewood, SC 29016</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-xl">
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="section">
+            <div class="container text-center">
+                <div class="section-header">
+                    <span class="section-header__subtitle">Stay Connected</span>
+                    <h2 class="section-header__title">Follow Us</h2>
+                    <p class="section-header__description">
+                        Stay up to date with the latest news, events, and fitness tips by following us on social media.
+                    </p>
+                </div>
+
+                <div class="social-links-large flex justify-center gap-lg">
+                    <a href="#" class="social-link-large" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="social-link-large" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="social-link-large" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="#" class="social-link-large" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        <span>Twitter/X</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <h2 class="cta-banner__title">Ready to Start Your Journey?</h2>
+                <p class="cta-banner__description">
+                    Join the FIT365 family today and experience the difference.
+                </p>
+                <a href="fitness.html#membership" class="btn btn--dark btn--lg">View Membership Options</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid grid grid-4 gap-xl">
+                <!-- Brand Column -->
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-text">FIT<span class="text-secondary">365</span></span>
+                    </a>
+                    <p class="footer__tagline">Strengthening Body, Mind & Spirit</p>
+                    <p class="footer__description">
+                        Your neighborhood premier fitness center and event showroom complex in Blythewood, SC.
+                    </p>
+                    <div class="social-links footer__social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer__links">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="fitness.html">Fitness Programs</a></li>
+                        <li><a href="events.html">Event Space</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs -->
+                <div class="footer__links">
+                    <h4 class="footer__heading">Programs</h4>
+                    <ul class="footer__list">
+                        <li><a href="fitness.html">Personal Training</a></li>
+                        <li><a href="fitness.html">Group Classes</a></li>
+                        <li><a href="fitness.html">Yoga & Pilates</a></li>
+                        <li><a href="fitness.html">Nutrition Counseling</a></li>
+                        <li><a href="fitness.html">Memberships</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer__contact">
+                    <h4 class="footer__heading">Contact Us</h4>
+                    <ul class="footer__contact-list">
+                        <li class="footer__contact-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Blythewood, SC</span>
+                        </li>
+                        <li class="footer__contact-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <a href="tel:+1234567890">(123) 456-7890</a>
+                        </li>
+                        <li class="footer__contact-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <a href="mailto:info@fit365.com">info@fit365.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2024 Fit 4 the Kingdom 365. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>
