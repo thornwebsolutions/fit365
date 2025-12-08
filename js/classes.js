@@ -7,18 +7,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const classesEmpty = document.getElementById('classesEmpty');
     const classesGrid = document.getElementById('classesGrid');
     const rsvpModal = document.getElementById('rsvpModal');
+    const modalOverlay = document.getElementById('modalOverlay');
     const rsvpForm = document.getElementById('rsvpForm');
-    const rsvpFormContainer = document.getElementById('rsvpFormContainer');
     const rsvpSuccess = document.getElementById('rsvpSuccess');
     const rsvpError = document.getElementById('rsvpError');
-    const closeModalBtn = document.getElementById('closeModal');
-    const cancelRsvpBtn = document.getElementById('cancelRsvp');
+    const closeModalBtn = document.getElementById('modalClose');
     const modalClassName = document.getElementById('modalClassName');
     const modalClassDate = document.getElementById('modalClassDate');
-    const modalClassTime = document.getElementById('modalClassTime');
-    const classIdInput = document.getElementById('classId');
-    const errorMessage = document.getElementById('errorMessage');
-    const submitBtn = rsvpForm.querySelector('button[type="submit"]');
+    const classIdInput = document.getElementById('rsvpClassId');
+    const rsvpErrorMessage = document.getElementById('rsvpErrorMessage');
+    const submitBtn = document.getElementById('rsvpSubmitBtn');
+    const submitText = document.getElementById('rsvpSubmitText');
+    const submitLoading = document.getElementById('rsvpSubmitLoading');
+    const rsvpCloseSuccess = document.getElementById('rsvpCloseSuccess');
+    const rsvpRetry = document.getElementById('rsvpRetry');
 
     let currentClassId = null;
 
@@ -118,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ${classItem.description ? `<p class="class-description">${escapeHtml(classItem.description)}</p>` : ''}
             </div>
             <div class="class-card-footer">
-                <button class="btn btn-primary rsvp-btn" ${isFull ? 'disabled' : ''} data-class-id="${classItem.id}" data-class-name="${escapeHtml(classItem.name)}" data-class-date="${formattedDate}" data-class-time="${escapeHtml(classItem.time)}">
+                <button class="btn btn--primary rsvp-btn" ${isFull ? 'disabled' : ''}>
                     ${isFull ? 'Class Full' : 'RSVP Now'}
                 </button>
             </div>
@@ -144,22 +146,22 @@ document.addEventListener('DOMContentLoaded', function() {
         currentClassId = classItem.id;
         classIdInput.value = classItem.id;
         modalClassName.textContent = classItem.name;
-        modalClassDate.textContent = formattedDate;
-        modalClassTime.textContent = classItem.time;
+        modalClassDate.textContent = `${formattedDate} at ${classItem.time}`;
 
-        // Reset form and show form container
+        // Reset form and show form
         rsvpForm.reset();
-        rsvpFormContainer.style.display = 'block';
+        rsvpForm.style.display = 'block';
         rsvpSuccess.style.display = 'none';
         rsvpError.style.display = 'none';
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Confirm RSVP';
+        submitText.style.display = 'inline';
+        submitLoading.style.display = 'none';
 
         rsvpModal.classList.add('active');
         document.body.style.overflow = 'hidden';
 
         // Focus first input
-        document.getElementById('firstName').focus();
+        document.getElementById('rsvpFirstName').focus();
     }
 
     function closeModal() {
@@ -172,9 +174,9 @@ document.addEventListener('DOMContentLoaded', function() {
     async function handleRsvpSubmit(e) {
         e.preventDefault();
 
-        const firstName = document.getElementById('firstName').value.trim();
-        const lastName = document.getElementById('lastName').value.trim();
-        const email = document.getElementById('email').value.trim();
+        const firstName = document.getElementById('rsvpFirstName').value.trim();
+        const lastName = document.getElementById('rsvpLastName').value.trim();
+        const email = document.getElementById('rsvpEmail').value.trim();
         const classId = classIdInput.value;
 
         // Validate
@@ -191,7 +193,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Submit
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Submitting...';
+        submitText.style.display = 'none';
+        submitLoading.style.display = 'inline';
 
         try {
             const response = await fetch(`${API_BASE}/rsvp`, {
@@ -214,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Show success
-            rsvpFormContainer.style.display = 'none';
+            rsvpForm.style.display = 'none';
             rsvpSuccess.style.display = 'block';
 
             // Reload classes after a delay to show updated spots
@@ -225,46 +228,50 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             console.error('RSVP error:', error);
             showError(error.message || 'Failed to submit RSVP. Please try again.');
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Confirm RSVP';
         }
     }
 
     function showError(message) {
-        errorMessage.textContent = message;
-        rsvpFormContainer.style.display = 'none';
+        rsvpErrorMessage.textContent = message;
+        rsvpForm.style.display = 'none';
         rsvpError.style.display = 'block';
     }
 
     function showForm() {
-        rsvpFormContainer.style.display = 'block';
+        rsvpForm.style.display = 'block';
         rsvpError.style.display = 'none';
+        submitBtn.disabled = false;
+        submitText.style.display = 'inline';
+        submitLoading.style.display = 'none';
     }
 
     // Event listeners
-    closeModalBtn.addEventListener('click', closeModal);
-    cancelRsvpBtn.addEventListener('click', closeModal);
-    rsvpForm.addEventListener('submit', handleRsvpSubmit);
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeModal);
+    }
 
-    // Close on backdrop click
-    rsvpModal.addEventListener('click', (e) => {
-        if (e.target === rsvpModal) {
-            closeModal();
-        }
-    });
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', closeModal);
+    }
+
+    if (rsvpForm) {
+        rsvpForm.addEventListener('submit', handleRsvpSubmit);
+    }
+
+    if (rsvpCloseSuccess) {
+        rsvpCloseSuccess.addEventListener('click', closeModal);
+    }
+
+    if (rsvpRetry) {
+        rsvpRetry.addEventListener('click', showForm);
+    }
 
     // Close on escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && rsvpModal.classList.contains('active')) {
+        if (e.key === 'Escape' && rsvpModal && rsvpModal.classList.contains('active')) {
             closeModal();
         }
     });
-
-    // Try again button
-    const tryAgainBtn = document.getElementById('tryAgainBtn');
-    if (tryAgainBtn) {
-        tryAgainBtn.addEventListener('click', showForm);
-    }
 
     // Initialize
     loadClasses();

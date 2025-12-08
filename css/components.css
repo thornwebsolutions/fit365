@@ -1104,7 +1104,114 @@
 }
 
 /* --------------------------------------------------------------------------
-   RSVP Modal
+   RSVP Modal (classes.html structure)
+   -------------------------------------------------------------------------- */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__content {
+    position: relative;
+    background-color: var(--color-background);
+    border-radius: var(--radius-lg);
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.9) translateY(20px);
+    transition: transform var(--transition-base);
+    padding: var(--space-xl);
+}
+
+.modal.active .modal__content {
+    transform: scale(1) translateY(0);
+}
+
+.modal__close {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+    color: var(--color-text-light);
+    transition: color var(--transition-fast);
+}
+
+.modal__close:hover {
+    color: var(--color-text);
+}
+
+.modal__header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.modal__title {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-sm);
+}
+
+.modal__class-name {
+    color: var(--color-secondary);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-xs);
+}
+
+.modal__class-date {
+    color: var(--color-text-light);
+    font-size: var(--text-sm);
+}
+
+.modal__form {
+    margin-bottom: 0;
+}
+
+.modal__success,
+.modal__error {
+    text-align: center;
+    padding: var(--space-lg) 0;
+}
+
+.modal__success svg,
+.modal__error svg {
+    display: block;
+    margin: 0 auto var(--space-lg);
+}
+
+.modal__success h3,
+.modal__error h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.modal__success p,
+.modal__error p {
+    color: var(--color-text-light);
+}
+
+/* --------------------------------------------------------------------------
+   Modal Overlay Style (admin.html structure)
    -------------------------------------------------------------------------- */
 .modal-overlay {
     position: fixed;
@@ -1125,7 +1232,8 @@
     visibility: visible;
 }
 
-.modal {
+.modal-overlay .modal {
+    position: relative;
     background-color: var(--color-background);
     border-radius: var(--radius-lg);
     width: 100%;
@@ -1134,6 +1242,10 @@
     overflow-y: auto;
     transform: scale(0.9) translateY(20px);
     transition: transform var(--transition-base);
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    inset: auto;
 }
 
 .modal-overlay.active .modal {
