@@ -403,29 +403,41 @@ select {
    Header Styles
    -------------------------------------------------------------------------- */
 .header {
+    position: static;
+    z-index: var(--z-sticky);
+    background-color: var(--color-primary);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: var(--z-sticky);
-    background-color: transparent;
-    transition: background-color var(--transition-base), box-shadow var(--transition-base);
-}
-
-.header.scrolled {
-    background-color: var(--color-primary);
+    background-color: rgba(0, 0, 0, 0.95);
     box-shadow: var(--shadow-md);
 }
 
 .header__inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: var(--space-lg) 0;
+    transition: padding 0.3s ease;
+}
+
+.header.scrolled .header__inner {
+    padding: var(--space-sm) 0;
+}
+
+.header.scrolled .nav__cta {
+    transform: scale(0.9);
 }
 
 .header__logo {
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .header__logo-text {
@@ -435,11 +447,21 @@ select {
     color: var(--color-text-white);
 }
 
-/* Navigation */
-.nav {
+/* Header Actions (Join Now + Cart) */
+.header__actions {
     display: flex;
     align-items: center;
-    gap: var(--space-xl);
+    gap: var(--space-sm);
+    flex-shrink: 0;
+}
+
+/* Navigation */
+.nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
 }
 
 .nav__list {
@@ -482,7 +504,52 @@ select {
 }
 
 .nav__cta {
-    margin-left: var(--space-md);
+    transition: transform 0.3s ease;
+}
+
+/* Cart Icon */
+.nav__cart {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-white);
+    transition: color var(--transition-fast);
+}
+
+.nav__cart:hover {
+    color: var(--color-secondary);
+}
+
+.nav__cart svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nav__cart-count {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    min-width: 18px;
+    height: 18px;
+    background-color: var(--color-secondary);
+    color: var(--color-text-white);
+    font-size: 11px;
+    font-weight: var(--font-bold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__cart-count:empty,
+.nav__cart-count[data-count="0"] {
+    display: none;
 }
 
 /* Mobile Menu Toggle */

@@ -212,6 +212,59 @@
     }
 
     /**
+     * Pricing Toggle
+     */
+    class PricingToggle {
+        constructor() {
+            this.toggle = document.querySelector('.pricing-toggle');
+            this.buttons = document.querySelectorAll('.pricing-toggle__btn');
+            this.priceElements = document.querySelectorAll('[data-monthly]');
+
+            if (this.toggle && this.buttons.length > 0) {
+                this.init();
+            }
+        }
+
+        init() {
+            this.buttons.forEach(btn => {
+                btn.addEventListener('click', () => this.switchPeriod(btn));
+            });
+        }
+
+        switchPeriod(activeBtn) {
+            const period = activeBtn.dataset.period;
+
+            // Update active button state
+            this.buttons.forEach(btn => {
+                btn.classList.remove('pricing-toggle__btn--active');
+            });
+            activeBtn.classList.add('pricing-toggle__btn--active');
+
+            // Update prices
+            this.priceElements.forEach(el => {
+                const priceValue = el.querySelector('.price-value');
+                const pricePeriod = el.querySelector('.price-period');
+
+                if (priceValue && pricePeriod) {
+                    priceValue.textContent = el.dataset[period];
+                    pricePeriod.textContent = period === 'monthly' ? '/mo' : '/yr';
+                }
+            });
+
+            // Update savings badges
+            document.querySelectorAll('.pricing-card__savings').forEach(badge => {
+                const savingsText = badge.dataset[period];
+                if (savingsText) {
+                    badge.textContent = savingsText;
+                    badge.style.display = 'inline-block';
+                } else {
+                    badge.style.display = 'none';
+                }
+            });
+        }
+    }
+
+    /**
      * Image Lazy Loading
      */
     class LazyLoader {
@@ -292,6 +345,9 @@
 
         // Initialize lazy loading
         new LazyLoader();
+
+        // Initialize pricing toggle
+        new PricingToggle();
 
         // Update copyright year
         updateCopyrightYear();

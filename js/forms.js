@@ -129,34 +129,70 @@
         }
 
         /**
-         * Submit the form (simulated)
+         * Submit the form to the API
          */
-        submitForm() {
+        async submitForm() {
             // Get form data
             const formData = new FormData(this.form);
             const data = Object.fromEntries(formData);
 
-            // Log data (in production, this would be sent to a server)
-            console.log('Form submitted:', data);
+            // Get submit button to disable during submission
+            const submitBtn = this.form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
 
-            // Show success message
-            if (this.successMessage) {
-                this.successMessage.classList.add('visible');
-            }
-
-            // Reset form
-            this.form.reset();
-
-            // Hide success message after delay
-            setTimeout(() => {
-                if (this.successMessage) {
-                    this.successMessage.classList.remove('visible');
+            try {
+                // Show loading state
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = 'Sending...';
                 }
-            }, 5000);
 
-            // Scroll to success message
-            if (this.successMessage) {
-                this.successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Determine endpoint based on form
+                const endpoint = this.form.id === 'contactForm' ? '/api/contact' : '/api/contact';
+
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'Failed to send message');
+                }
+
+                // Show success message
+                if (this.successMessage) {
+                    this.successMessage.classList.add('visible');
+                }
+
+                // Reset form
+                this.form.reset();
+
+                // Hide success message after delay
+                setTimeout(() => {
+                    if (this.successMessage) {
+                        this.successMessage.classList.remove('visible');
+                    }
+                }, 5000);
+
+                // Scroll to success message
+                if (this.successMessage) {
+                    this.successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('There was an error sending your message. Please try again or contact us directly.');
+            } finally {
+                // Restore button state
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                }
             }
         }
     }
@@ -182,6 +218,12 @@
         const today = new Date().toISOString().split('T')[0];
         dateInputs.forEach(input => {
             input.setAttribute('min', today);
+            // Open calendar when clicking anywhere on the input
+            input.addEventListener('click', function() {
+                if (this.showPicker) {
+                    this.showPicker();
+                }
+            });
         });
     }
 

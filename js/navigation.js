@@ -6,12 +6,12 @@
 (function() {
     'use strict';
 
-    // DOM Elements
-    const header = document.getElementById('header');
-    const nav = document.getElementById('nav');
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-    const navLinks = document.querySelectorAll('.nav__link');
+    // DOM Elements - declared here, assigned in init() after header is rendered
+    let header;
+    let nav;
+    let mobileMenuToggle;
+    let mobileMenuOverlay;
+    let navLinks;
 
     // State
     let isMenuOpen = false;
@@ -21,6 +21,13 @@
      * Initialize navigation functionality
      */
     function init() {
+        // Get DOM elements NOW, after header has been rendered
+        header = document.getElementById('header');
+        nav = document.getElementById('nav');
+        mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        navLinks = document.querySelectorAll('.nav__link');
+
         if (mobileMenuToggle) {
             mobileMenuToggle.addEventListener('click', toggleMobileMenu);
         }
@@ -108,9 +115,17 @@
         // Add scrolled class when scrolled past threshold
         if (header) {
             if (currentScrollY > 50) {
-                header.classList.add('scrolled');
+                if (!header.classList.contains('scrolled')) {
+                    // Add padding to body to prevent content jump
+                    document.body.style.paddingTop = header.offsetHeight + 'px';
+                    header.classList.add('scrolled');
+                }
             } else {
-                header.classList.remove('scrolled');
+                if (header.classList.contains('scrolled')) {
+                    // Remove padding when header returns to static
+                    document.body.style.paddingTop = '';
+                    header.classList.remove('scrolled');
+                }
             }
         }
 
@@ -171,10 +186,16 @@
         }
     }
 
-    // Initialize when DOM is ready
+    // Initialize when header is rendered (since header is dynamically injected)
+    document.addEventListener('headerRendered', init);
+
+    // Fallback: also try on DOMContentLoaded in case header is already rendered
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
+        document.addEventListener('DOMContentLoaded', function() {
+            // Only init if header exists (means headerRendered already fired)
+            if (document.getElementById('header')) {
+                init();
+            }
+        });
     }
 })();

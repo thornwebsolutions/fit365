@@ -6,6 +6,30 @@
     <meta name="description" content="Host your next event at FIT365's elegant showroom. Up to 75 guests, full rental equipment, and professional event coordination in Blythewood, SC.">
     <title>Event Showroom & Rentals - FIT365</title>
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fit365-eight.vercel.app/events">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Event Showroom & Rentals - FIT365">
+    <meta property="og:description" content="Host your next event at FIT365's elegant showroom. Up to 75 guests, full rental equipment, and professional event coordination in Blythewood, SC.">
+    <meta property="og:url" content="https://fit365-eight.vercel.app/events">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FIT365">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Event Showroom & Rentals - FIT365">
+    <meta name="twitter:description" content="Host your next event at FIT365's elegant showroom. Up to 75 guests, full rental equipment, and professional event coordination in Blythewood, SC.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,46 +42,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="index.html" class="header__logo">
-                    <span class="header__logo-text">FIT<span class="text-secondary">365</span></span>
-                </a>
-
-                <nav class="nav" id="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="index.html" class="nav__link">Home</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="about.html" class="nav__link">About</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="fitness.html" class="nav__link">Fitness</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="classes.html" class="nav__link">Classes</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="events.html" class="nav__link nav__link--active">Events</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="contact.html" class="nav__link">Contact</a>
-                        </li>
-                    </ul>
-                    <a href="contact.html" class="btn btn--primary nav__cta">Join Now</a>
-                </nav>
-
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false">
-                    <span class="mobile-menu-toggle__bar"></span>
-                    <span class="mobile-menu-toggle__bar"></span>
-                    <span class="mobile-menu-toggle__bar"></span>
-                </button>
-            </div>
-        </div>
-        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-    </header>
+    <div id="header-container"></div>
 
     <main>
         <!-- Page Hero -->
@@ -67,11 +52,6 @@
             </div>
             <div class="container">
                 <div class="hero__content text-center" style="max-width: 100%;">
-                    <nav class="breadcrumb">
-                        <a href="index.html" class="breadcrumb__link">Home</a>
-                        <span class="breadcrumb__separator">/</span>
-                        <span class="breadcrumb__current">Events</span>
-                    </nav>
                     <h1 class="hero__title">Create Unforgettable Moments</h1>
                     <p class="hero__description">
                         Host your next celebration in our world-class event showroom. Intimate, elegant, and fully equipped for up to 75 guests.
@@ -160,76 +140,100 @@
                 </div>
 
                 <div class="services-grid grid grid-3 gap-lg">
-                    <div class="service-card card fade-in">
-                        <div class="service-card__icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
-                            </svg>
+                    <div class="card fade-in">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem;">Full Event Setup</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-light);">
+                                Complete setup and breakdown of your event space, customized to your vision.
+                            </p>
                         </div>
-                        <h4 class="service-card__title">Full Event Setup</h4>
-                        <p class="service-card__description">
-                            Complete setup and breakdown of your event space, customized to your vision.
-                        </p>
                     </div>
 
-                    <div class="service-card card fade-in">
-                        <div class="service-card__icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
-                            </svg>
+                    <div class="card fade-in">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M6 3l1 8h10l1-8H6zm12 8H6l-.6 5c-.1.5.3 1 .8 1H11v3H9v2h6v-2h-2v-3h4.8c.5 0 .9-.5.8-1L18 11z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem;">Premium Glassware</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-light);">
+                                Elegant glassware for any occasion, from champagne flutes to wine glasses.
+                            </p>
                         </div>
-                        <h4 class="service-card__title">Premium Glassware</h4>
-                        <p class="service-card__description">
-                            Elegant glassware for any occasion, from champagne flutes to wine glasses.
-                        </p>
                     </div>
 
-                    <div class="service-card card fade-in">
-                        <div class="service-card__icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M21 9V7l-2-1V3H5v3L3 7v2l2 1v8l-2 1v2h18v-2l-2-1v-8l2-1zM7 5h10v1H7V5zm0 14H5v-.38l2-1V17v1zm0-3h10v2H7v-2zm10 3v.62l2 1V19h-2zm0-5H7v-2h10v2zm0-4H7V8h10v2z"/>
-                            </svg>
+                    <div class="card fade-in">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M20 8V6c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v2c-1.1 0-2 .9-2 2v8h2v-2h16v2h2v-8c0-1.1-.9-2-2-2zM6 6h12v2H6V6zm14 10H4v-4c0-.55.45-1 1-1h1v2h12v-2h1c.55 0 1 .45 1 1v4z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem;">Elegant Furniture</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-light);">
+                                Beautiful tables, chairs, and lounge furniture to match your event style.
+                            </p>
                         </div>
-                        <h4 class="service-card__title">Elegant Furniture</h4>
-                        <p class="service-card__description">
-                            Beautiful tables, chairs, and lounge furniture to match your event style.
-                        </p>
                     </div>
 
-                    <div class="service-card card fade-in">
-                        <div class="service-card__icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-                            </svg>
+                    <div class="card fade-in">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem;">Audio/Visual Equipment</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-light);">
+                                Sound system, microphones, and display screens for presentations or entertainment.
+                            </p>
                         </div>
-                        <h4 class="service-card__title">Audio/Visual Equipment</h4>
-                        <p class="service-card__description">
-                            Sound system, microphones, and display screens for presentations or entertainment.
-                        </p>
                     </div>
 
-                    <div class="service-card card fade-in">
-                        <div class="service-card__icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
-                            </svg>
+                    <div class="card fade-in">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem;">Catering Coordination</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-light);">
+                                We work with trusted catering partners or accommodate your chosen caterer.
+                            </p>
                         </div>
-                        <h4 class="service-card__title">Catering Coordination</h4>
-                        <p class="service-card__description">
-                            We work with trusted catering partners or accommodate your chosen caterer.
-                        </p>
                     </div>
 
-                    <div class="service-card card fade-in">
-                        <div class="service-card__icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                            </svg>
+                    <div class="card fade-in">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem;">Event Planning Support</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-light);">
+                                Our experienced coordinator helps you plan every detail of your perfect event.
+                            </p>
                         </div>
-                        <h4 class="service-card__title">Event Planning Support</h4>
-                        <p class="service-card__description">
-                            Our experienced coordinator helps you plan every detail of your perfect event.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -298,6 +302,80 @@
             </div>
         </section>
 
+        <!-- Wedding Packages Section -->
+        <section class="section wedding-packages">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-header__subtitle">Wedding Services</span>
+                    <h2 class="section-header__title">Micro Wedding Packages</h2>
+                    <p class="section-header__description">
+                        Choose the perfect package for your special day
+                    </p>
+                </div>
+
+                <div class="wedding-grid">
+                    <!-- 365 Package -->
+                    <div class="wedding-card fade-in">
+                        <img src="assets/images/Wedding Package- 365-package.avif" alt="365 Wedding Package" class="wedding-card__image">
+                        <div class="wedding-card__content">
+                            <h3 class="wedding-card__title">365 Package</h3>
+                            <div class="wedding-card__price">$4,500</div>
+                            <ul class="wedding-card__features">
+                                <li>8 hour rental (includes setup & breakdown)</li>
+                                <li>Basic table linens, runners & centerpieces</li>
+                                <li>Sweetheart table & ceremony setup</li>
+                                <li>Buffet dinner with entree, side & salad</li>
+                                <li>Non-alcoholic beverage station</li>
+                                <li>Single tier custom wedding cake</li>
+                                <li>Day-of coordinator (6 hours)</li>
+                                <li>Bluetooth sound system</li>
+                            </ul>
+                            <a href="#inquiry" class="btn btn--primary">Inquire Now</a>
+                        </div>
+                    </div>
+
+                    <!-- FIT Package -->
+                    <div class="wedding-card wedding-card--featured fade-in">
+                        <img src="assets/images/Wedding Package- FIT-package.avif" alt="FIT Wedding Package" class="wedding-card__image">
+                        <div class="wedding-card__content">
+                            <h3 class="wedding-card__title">FIT Package</h3>
+                            <div class="wedding-card__price">$5,200</div>
+                            <p class="wedding-card__includes">Includes everything in 365 Package, plus:</p>
+                            <ul class="wedding-card__features">
+                                <li>Upgraded linens, napkins & charger plates</li>
+                                <li>Fresh floral or premier candle centerpieces</li>
+                                <li>Enhanced sweetheart table with backdrop</li>
+                                <li>2 tier custom wedding cake</li>
+                                <li>Champagne toast for couple & wedding party</li>
+                            </ul>
+                            <a href="#inquiry" class="btn btn--primary">Inquire Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Kingdom Package -->
+                    <div class="wedding-card fade-in">
+                        <img src="assets/images/Wedding Package-Kingdom.avif" alt="Kingdom Wedding Package" class="wedding-card__image">
+                        <div class="wedding-card__content">
+                            <h3 class="wedding-card__title">Kingdom Package</h3>
+                            <div class="wedding-card__price">$6,200</div>
+                            <p class="wedding-card__includes">Includes everything in FIT Package, plus:</p>
+                            <ul class="wedding-card__features">
+                                <li>Premium fresh floral & candelabra centerpieces</li>
+                                <li>Floral backdrop & draping for sweetheart table</li>
+                                <li>Luxury ceremony arch & 6 wireless uplights</li>
+                                <li>Plated or buffet with 2 entrees, 2 sides & salad</li>
+                                <li>Signature cocktails (provided by couple)</li>
+                                <li>3 tier custom wedding cake</li>
+                                <li>Dedicated server staff</li>
+                                <li>Extended venue access (10 hours)</li>
+                            </ul>
+                            <a href="#inquiry" class="btn btn--primary">Inquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Event Inquiry Form Section -->
         <section class="section section--alt" id="inquiry">
             <div class="container">
@@ -341,6 +419,7 @@
                                     <label for="eventType" class="form-label form-label--required">Event Type</label>
                                     <select id="eventType" name="eventType" class="form-select" required>
                                         <option value="">Select event type</option>
+                                        <option value="micro-wedding">Micro Wedding</option>
                                         <option value="corporate">Corporate Event</option>
                                         <option value="private">Private Party</option>
                                         <option value="reception">Reception</option>
@@ -362,9 +441,9 @@
                                     <label for="eventGuests" class="form-label form-label--required">Estimated Guests</label>
                                     <select id="eventGuests" name="guests" class="form-select" required>
                                         <option value="">Select guest count</option>
-                                        <option value="1-25">1-25 guests</option>
-                                        <option value="26-50">26-50 guests</option>
-                                        <option value="51-75">51-75 guests</option>
+                                        <option value="1-15">1-15 guests</option>
+                                        <option value="16-30">16-30 guests</option>
+                                        <option value="31-50">31-50 guests</option>
                                     </select>
                                     <span class="form-error">Please select guest count</span>
                                 </div>
@@ -491,98 +570,11 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid grid grid-4 gap-xl">
-                <!-- Brand Column -->
-                <div class="footer__brand">
-                    <a href="index.html" class="footer__logo">
-                        <span class="footer__logo-text">FIT<span class="text-secondary">365</span></span>
-                    </a>
-                    <p class="footer__tagline">Strengthening Body, Mind & Spirit</p>
-                    <p class="footer__description">
-                        Your neighborhood premier fitness center and event showroom complex in Blythewood, SC.
-                    </p>
-                    <div class="social-links footer__social">
-                        <a href="#" class="social-link" aria-label="Facebook">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="YouTube">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="footer__links">
-                    <h4 class="footer__heading">Quick Links</h4>
-                    <ul class="footer__list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="fitness.html">Fitness Programs</a></li>
-                        <li><a href="events.html">Event Space</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Programs -->
-                <div class="footer__links">
-                    <h4 class="footer__heading">Programs</h4>
-                    <ul class="footer__list">
-                        <li><a href="fitness.html">Personal Training</a></li>
-                        <li><a href="fitness.html">Group Classes</a></li>
-                        <li><a href="fitness.html">Yoga & Pilates</a></li>
-                        <li><a href="fitness.html">Nutrition Counseling</a></li>
-                        <li><a href="fitness.html">Memberships</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="footer__contact">
-                    <h4 class="footer__heading">Contact Us</h4>
-                    <ul class="footer__contact-list">
-                        <li class="footer__contact-item">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Blythewood, SC</span>
-                        </li>
-                        <li class="footer__contact-item">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                            </svg>
-                            <a href="tel:+1234567890">(123) 456-7890</a>
-                        </li>
-                        <li class="footer__contact-item">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                            <a href="mailto:info@fit365.com">info@fit365.com</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer__bottom">
-                <p class="footer__copyright">&copy; 2024 Fit 4 the Kingdom 365. All rights reserved.</p>
-                <div class="footer__legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
 
     <!-- Scripts -->
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
     <script src="js/forms.js"></script>

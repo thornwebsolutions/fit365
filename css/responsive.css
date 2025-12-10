@@ -51,6 +51,8 @@
         padding: 100px var(--space-xl) var(--space-xl);
         transition: right var(--transition-base);
         z-index: var(--z-fixed);
+        left: auto;
+        transform: none;
     }
 
     .nav.active {
@@ -69,10 +71,9 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .nav__cta {
-        margin-top: var(--space-xl);
-        width: 100%;
-        text-align: center;
+    /* Hide Join Now button on mobile header, show only hamburger and cart */
+    .header__actions .nav__cta {
+        display: none;
     }
 
     .mobile-menu-toggle {
