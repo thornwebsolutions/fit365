@@ -715,6 +715,7 @@
     justify-content: space-between;
     padding: var(--space-lg) var(--space-xl);
     background-color: var(--color-background-alt);
+    color: var(--color-text);
     font-family: var(--font-heading);
     font-size: var(--text-lg);
     font-weight: var(--font-semibold);
