@@ -9,14 +9,19 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://fit365-eight.vercel.app/events">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Event Showroom & Rentals - FIT365">
     <meta property="og:description" content="Host your next event at FIT365's elegant showroom. Up to 75 guests, full rental equipment, and professional event coordination in Blythewood, SC.">
     <meta property="og:url" content="https://fit365-eight.vercel.app/events">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="FIT365">
+    <meta property="og:image" content="https://fit365-eight.vercel.app/assets/images/og-image.png">
 
     <!-- Twitter Card Tags -->
+    <meta name="twitter:image" content="https://fit365-eight.vercel.app/assets/images/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Event Showroom & Rentals - FIT365">
     <meta name="twitter:description" content="Host your next event at FIT365's elegant showroom. Up to 75 guests, full rental equipment, and professional event coordination in Blythewood, SC.">
@@ -46,16 +51,18 @@
 
     <main>
         <!-- Page Hero -->
-        <section class="hero page-hero">
-            <div class="hero__background-placeholder">
-                <span>[Hero Image: Elegant event space setup]</span>
-            </div>
+        <section class="hero hero--full">
             <div class="container">
-                <div class="hero__content text-center" style="max-width: 100%;">
+                <div class="hero__content fade-in">
+                    <span class="hero__subtitle">Event Showroom</span>
                     <h1 class="hero__title">Create Unforgettable Moments</h1>
                     <p class="hero__description">
                         Host your next celebration in our world-class event showroom. Intimate, elegant, and fully equipped for up to 75 guests.
                     </p>
+                    <div class="hero__cta">
+                        <a href="#inquiry" class="btn btn--primary btn--lg">Book Your Event</a>
+                        <a href="/contact" class="btn btn--secondary btn--lg">Contact Us</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -103,24 +110,16 @@
                     <div class="venue-overview__gallery">
                         <div class="gallery-grid" style="grid-template-columns: repeat(2, 1fr);">
                             <div class="gallery-grid__item">
-                                <div class="placeholder-image placeholder-image--square">
-                                    [Image: Event space wide view]
-                                </div>
+                                <img src="assets/images/event 1.jpeg" alt="Event Space" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md);">
                             </div>
                             <div class="gallery-grid__item">
-                                <div class="placeholder-image placeholder-image--square">
-                                    [Image: Table setup]
-                                </div>
+                                <img src="assets/images/event 2.jpeg" alt="Event Setup" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md);">
                             </div>
                             <div class="gallery-grid__item">
-                                <div class="placeholder-image placeholder-image--square">
-                                    [Image: Elegant decor details]
-                                </div>
+                                <img src="assets/images/event 3.jpeg" alt="Event Decor" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md);">
                             </div>
                             <div class="gallery-grid__item">
-                                <div class="placeholder-image placeholder-image--square">
-                                    [Image: Event in progress]
-                                </div>
+                                <img src="assets/images/event 4.jpeg" alt="Event Space" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md);">
                             </div>
                         </div>
                     </div>
@@ -239,64 +238,339 @@
             </div>
         </section>
 
-        <!-- Event Types Section -->
+        <!-- Pricing & Amenities Section -->
         <section class="section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-header__subtitle">Perfect For</span>
-                    <h2 class="section-header__title">Types of Events</h2>
+                    <span class="section-header__subtitle">Venue Rental</span>
+                    <h2 class="section-header__title">Pricing & Amenities for Event Center</h2>
                     <p class="section-header__description">
-                        Our versatile space is ideal for a variety of occasions.
+                        AM (8 am - 4 pm) &nbsp;|&nbsp; PM (6 pm - 1 am)<br>
+                        FULL DAY (any 12 hours between 8 am - 1 am)
                     </p>
                 </div>
 
-                <div class="event-types grid grid-2 gap-xl">
-                    <div class="card card--horizontal fade-in">
-                        <div class="card__image-placeholder">
-                            [Image: Corporate meeting]
+                <div class="pricing-table" style="max-width: 700px; margin: 0 auto var(--space-2xl);">
+                    <table style="width: 100%; border-collapse: collapse; text-align: center;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--color-secondary);">
+                                <th style="padding: var(--space-md); text-align: left;">Day</th>
+                                <th style="padding: var(--space-md);">6 Hours</th>
+                                <th style="padding: var(--space-md);">12 Hours</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--color-border);">
+                                <td style="padding: var(--space-md); text-align: left; font-weight: 500;">Mon - Thurs</td>
+                                <td style="padding: var(--space-md);">$375</td>
+                                <td style="padding: var(--space-md);">$675</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--color-border);">
+                                <td style="padding: var(--space-md); text-align: left; font-weight: 500;">Fri / Sun</td>
+                                <td style="padding: var(--space-md);">$700</td>
+                                <td style="padding: var(--space-md);">$1,000</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: var(--space-md); text-align: left; font-weight: 500;">Saturday</td>
+                                <td style="padding: var(--space-md);">$900</td>
+                                <td style="padding: var(--space-md);">$1,300</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="text-align: center; color: var(--color-secondary); margin-top: var(--space-md); font-style: italic;">
+                        * Host up to 75 guests banquet or chapel style
+                    </p>
+                </div>
+
+                <div class="included-rental" style="max-width: 700px; margin: 0 auto;">
+                    <h3 style="text-align: center; margin-bottom: var(--space-lg);">Included in Rental</h3>
+                    <div class="grid grid-2 gap-md" style="max-width: 500px; margin: 0 auto;">
+                        <div class="flex items-center gap-sm">
+                            <svg viewBox="0 0 24 24" fill="var(--color-secondary)" width="20" height="20">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>60 inch round tables (10)</span>
                         </div>
+                        <div class="flex items-center gap-sm">
+                            <svg viewBox="0 0 24 24" fill="var(--color-secondary)" width="20" height="20">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>6 ft rectangular tables (15)</span>
+                        </div>
+                        <div class="flex items-center gap-sm">
+                            <svg viewBox="0 0 24 24" fill="var(--color-secondary)" width="20" height="20">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Clear Chivari chairs (100)</span>
+                        </div>
+                        <div class="flex items-center gap-sm">
+                            <svg viewBox="0 0 24 24" fill="var(--color-secondary)" width="20" height="20">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cocktail tables (4)</span>
+                        </div>
+                        <div class="flex items-center gap-sm">
+                            <svg viewBox="0 0 24 24" fill="var(--color-secondary)" width="20" height="20">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Black or white table linens</span>
+                        </div>
+                        <div class="flex items-center gap-sm">
+                            <svg viewBox="0 0 24 24" fill="var(--color-secondary)" width="20" height="20">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Access to Kitchen Prep area</span>
+                        </div>
+                    </div>
+                    <p style="text-align: center; color: var(--color-text-light); margin-top: var(--space-lg); font-size: 0.9rem;">
+                        ** Additional rental equipment is available upon request.
+                    </p>
+                </div>
+
+                <div class="rental-notes" style="max-width: 700px; margin: var(--space-2xl) auto 0; text-align: center;">
+                    <p style="color: var(--color-secondary); margin-bottom: var(--space-sm);">
+                        *** Venue rental prices are subject to increase during Holidays
+                    </p>
+                    <p style="color: var(--color-text-light); font-size: 0.9rem;">
+                        All packages require a $200 security deposit which is refundable within (7) business days after scheduled event without incidentals and/or damages. Deposits are nonrefundable in the event of date change, cancellation, damages or breach of rental agreement and terms/conditions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Services and Rentals Section -->
+        <section class="section section--alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-header__subtitle">Add-Ons</span>
+                    <h2 class="section-header__title">Additional Services and Rentals</h2>
+                    <p class="section-header__description">
+                        Enhance your event with our premium add-on services and rental equipment.
+                    </p>
+                </div>
+
+                <div class="services-grid grid grid-3 gap-lg">
+                    <!-- Rental Delivery Service -->
+                    <div class="card fade-in" style="background-color: #1a1a1a; color: white;">
                         <div class="card__content">
-                            <h4 class="card__title">Corporate Events</h4>
-                            <p class="card__description">
-                                Team meetings, presentations, workshops, and company celebrations in a professional setting.
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem; color: white;">Rental Delivery Service</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                                Delivery within 100 miles of Blythewood
                             </p>
+                            <p style="color: var(--color-secondary); font-weight: 600; margin-top: var(--space-sm);">Cost Varies</p>
                         </div>
                     </div>
 
-                    <div class="card card--horizontal fade-in">
-                        <div class="card__image-placeholder">
-                            [Image: Private party]
-                        </div>
+                    <!-- 20x40 ft Tent -->
+                    <div class="card fade-in" style="background-color: #1a1a1a; color: white;">
                         <div class="card__content">
-                            <h4 class="card__title">Private Parties</h4>
-                            <p class="card__description">
-                                Birthday celebrations, anniversaries, graduations, and special milestones with loved ones.
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 11.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem; color: white;">20x40 ft Tent</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                                Setup and delivery required
                             </p>
+                            <p style="color: var(--color-secondary); font-weight: 600; margin-top: var(--space-sm);">$575 (tent only)</p>
                         </div>
                     </div>
 
-                    <div class="card card--horizontal fade-in">
-                        <div class="card__image-placeholder">
-                            [Image: Reception setup]
-                        </div>
+                    <!-- Venue Cleaning Service -->
+                    <div class="card fade-in" style="background-color: #1a1a1a; color: white;">
                         <div class="card__content">
-                            <h4 class="card__title">Receptions</h4>
-                            <p class="card__description">
-                                Elegant receptions for weddings, engagement parties, or other formal celebrations.
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M19.36 2.72L20.78 4.14l-1.6 1.6a6.503 6.503 0 01-1.47 8.78l-.78.57 5.54 5.54-1.41 1.41-5.54-5.54-.57.78a6.503 6.503 0 01-8.78 1.47l-1.6 1.6-1.42-1.42 1.6-1.6a6.503 6.503 0 011.47-8.78l.78-.57L1.46 2.46 2.88 1.05l5.54 5.54.57-.78a6.503 6.503 0 018.78-1.47l1.6-1.6z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem; color: white;">Venue Cleaning Service</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                                Let us do the clean-up after your event
                             </p>
+                            <p style="color: var(--color-secondary); font-weight: 600; margin-top: var(--space-sm);">$60 (2 hr)</p>
                         </div>
                     </div>
 
-                    <div class="card card--horizontal fade-in">
-                        <div class="card__image-placeholder">
-                            [Image: Community gathering]
-                        </div>
+                    <!-- Specialty Table Linens -->
+                    <div class="card fade-in" style="background-color: #1a1a1a; color: white;">
                         <div class="card__content">
-                            <h4 class="card__title">Community Gatherings</h4>
-                            <p class="card__description">
-                                Church events, community meetings, fundraisers, and fellowship gatherings.
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem; color: white;">Specialty Table Linens</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                                Spandex, velvet, textured, colored options
                             </p>
+                            <p style="color: var(--color-secondary); font-weight: 600; margin-top: var(--space-sm);">Varies</p>
                         </div>
+                    </div>
+
+                    <!-- Uplighting -->
+                    <div class="card fade-in" style="background-color: #1a1a1a; color: white;">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem; color: white;">Uplighting</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                                Transform your space with special lighting
+                            </p>
+                            <p style="color: var(--color-secondary); font-weight: 600; margin-top: var(--space-sm);">Varies</p>
+                        </div>
+                    </div>
+
+                    <!-- Draping & Balloon Garland -->
+                    <div class="card fade-in" style="background-color: #1a1a1a; color: white;">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem; color: white;">Draping & 15 ft Balloon Garland</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                                Beautiful draping and balloon decorations
+                            </p>
+                            <p style="color: var(--color-secondary); font-weight: 600; margin-top: var(--space-sm);">$250 (3 hr)</p>
+                        </div>
+                    </div>
+
+                    <!-- Centerpieces/Vases -->
+                    <div class="card fade-in" style="background-color: #1a1a1a; color: white;">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9zM5.6 10.25c0 1.38 1.12 2.5 2.5 2.5.53 0 1.01-.16 1.42-.44l-.02.19c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5l-.02-.19c.4.28.89.44 1.42.44 1.38 0 2.5-1.12 2.5-2.5 0-1-.59-1.85-1.43-2.25.84-.4 1.43-1.25 1.43-2.25 0-1.38-1.12-2.5-2.5-2.5-.53 0-1.01.16-1.42.44l.02-.19C14.5 2.12 13.38 1 12 1S9.5 2.12 9.5 3.5l.02.19c-.4-.28-.89-.44-1.42-.44-1.38 0-2.5 1.12-2.5 2.5 0 1 .59 1.85 1.43 2.25-.84.4-1.43 1.25-1.43 2.25zM12 5.5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5S9.5 9.38 9.5 8s1.12-2.5 2.5-2.5zM3 13c0 4.97 4.03 9 9 9 0-4.97-4.03-9-9-9z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem; color: white;">Centerpieces/Vases</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                                Statement centerpieces for your tables
+                            </p>
+                            <p style="color: var(--color-secondary); font-weight: 600; margin-top: var(--space-sm);">Varies</p>
+                        </div>
+                    </div>
+
+                    <!-- Chaffing Dishes -->
+                    <div class="card fade-in" style="background-color: #1a1a1a; color: white;">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem; color: white;">Chaffing Dishes</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                                Dishes FIT for excellence
+                            </p>
+                            <p style="color: var(--color-secondary); font-weight: 600; margin-top: var(--space-sm);">$15/chaffer (6 hr)</p>
+                        </div>
+                    </div>
+
+                    <!-- Charger Plates/Flatware -->
+                    <div class="card fade-in" style="background-color: #1a1a1a; color: white;">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem; color: white;">Charger Plates/Flatware</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                                Add design to your tablescape
+                            </p>
+                            <p style="color: var(--color-secondary); font-weight: 600; margin-top: var(--space-sm);">$1/charger, $1.50/flatware</p>
+                        </div>
+                    </div>
+
+                    <!-- Balloon Design -->
+                    <div class="card fade-in" style="background-color: #1a1a1a; color: white;">
+                        <div class="card__content">
+                            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div style="width: 36px; height: 36px; background-color: var(--color-secondary); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm1 14h-2v-1h2v1zm0-2h-2v-1h2v1zm1.5-3.5c-.41.41-.62.64-1 .93V12h-3v-.57c-.38-.29-.59-.52-1-.93-.63-.63-1-1.49-1-2.5 0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.01-.37 1.87-1 2.5z"/>
+                                    </svg>
+                                </div>
+                                <h4 style="margin: 0; font-size: 1.1rem; color: white;">Balloon Design</h4>
+                            </div>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                                Arches, garlands, stantions & more
+                            </p>
+                            <p style="color: var(--color-secondary); font-weight: 600; margin-top: var(--space-sm);">$30 - $450</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialty Rentals Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-header__subtitle">Premium Options</span>
+                    <h2 class="section-header__title">Specialty Rentals</h2>
+                    <p class="section-header__description">
+                        Elevate your event with our specialty rental items. Contact us for pricing and availability.
+                    </p>
+                </div>
+
+                <div class="specialty-rentals grid grid-4 gap-lg" style="max-width: 900px; margin: 0 auto;">
+                    <div class="card fade-in text-center" style="background-color: #1a1a1a; color: white; padding: var(--space-xl);">
+                        <svg viewBox="0 0 24 24" fill="var(--color-secondary)" width="48" height="48" style="margin: 0 auto var(--space-md);">
+                            <path d="M21 9V7H3v2h1v6H3v2h18v-2h-1V9h1zM5 15V9h14v6H5z"/>
+                        </svg>
+                        <h4 style="color: white; margin: 0;">Estate Tables</h4>
+                    </div>
+
+                    <div class="card fade-in text-center" style="background-color: #1a1a1a; color: white; padding: var(--space-xl);">
+                        <svg viewBox="0 0 24 24" fill="var(--color-secondary)" width="48" height="48" style="margin: 0 auto var(--space-md);">
+                            <path d="M20 8V6c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v2c-1.1 0-2 .9-2 2v8h2v-2h16v2h2v-8c0-1.1-.9-2-2-2zM6 6h12v2H6V6zm14 10H4v-4c0-.55.45-1 1-1h1v2h12v-2h1c.55 0 1 .45 1 1v4z"/>
+                        </svg>
+                        <h4 style="color: white; margin: 0;">Specialty Seating</h4>
+                    </div>
+
+                    <div class="card fade-in text-center" style="background-color: #1a1a1a; color: white; padding: var(--space-xl);">
+                        <svg viewBox="0 0 24 24" fill="var(--color-secondary)" width="48" height="48" style="margin: 0 auto var(--space-md);">
+                            <path d="M12 2c-.5 0-1 .19-1.41.59-.78.79-1.09 1.89-.88 2.91.21 1.02.84 1.91 1.79 2.5v2h1V8c.95-.59 1.58-1.48 1.79-2.5.21-1.02-.1-2.12-.88-2.91C13 2.19 12.5 2 12 2zm-1 10H9v10h2v-4h2v4h2V12h-2v3h-2v-3z"/>
+                        </svg>
+                        <h4 style="color: white; margin: 0;">Chandeliers &<br>Candelabras</h4>
+                    </div>
+
+                    <div class="card fade-in text-center" style="background-color: #1a1a1a; color: white; padding: var(--space-xl);">
+                        <svg viewBox="0 0 24 24" fill="var(--color-secondary)" width="48" height="48" style="margin: 0 auto var(--space-md);">
+                            <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                        </svg>
+                        <h4 style="color: white; margin: 0;">Columns, Stantions,<br>Red Carpet & More</h4>
                     </div>
                 </div>
             </div>
@@ -389,7 +663,7 @@
                         <div class="event-inquiry-contact mt-xl">
                             <h4>Prefer to talk?</h4>
                             <p class="text-light">
-                                Call us directly at <a href="tel:+1234567890">(123) 456-7890</a> or email <a href="mailto:events@fit365.com">events@fit365.com</a>
+                                Call us directly at <a href="tel:+18034042585">(803) 404-2585</a> or email <a href="mailto:fitblythewood@fit4thekingdom365.org">fitblythewood@fit4thekingdom365.org</a>
                             </p>
                         </div>
                     </div>
@@ -444,6 +718,8 @@
                                         <option value="1-15">1-15 guests</option>
                                         <option value="16-30">16-30 guests</option>
                                         <option value="31-50">31-50 guests</option>
+                                        <option value="51-75" class="extended-guest-option">51-75 guests</option>
+                                        <option value="76-100" class="extended-guest-option">76-100 guests</option>
                                     </select>
                                     <span class="form-error">Please select guest count</span>
                                 </div>
@@ -578,5 +854,26 @@
     <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
     <script src="js/forms.js"></script>
+    <script>
+        // Dynamic guest count options based on event type
+        document.addEventListener('DOMContentLoaded', function() {
+            const eventTypeSelect = document.getElementById('eventType');
+            const guestSelect = document.getElementById('eventGuests');
+            const extendedOptions = guestSelect.querySelectorAll('.extended-guest-option');
+
+            function updateGuestOptions() {
+                const isMicroWedding = eventTypeSelect.value === 'micro-wedding';
+                extendedOptions.forEach(option => {
+                    option.style.display = isMicroWedding ? 'none' : '';
+                    if (isMicroWedding && option.selected) {
+                        guestSelect.value = '';
+                    }
+                });
+            }
+
+            eventTypeSelect.addEventListener('change', updateGuestOptions);
+            updateGuestOptions();
+        });
+    </script>
 </body>
 </html>

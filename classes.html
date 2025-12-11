@@ -9,14 +9,19 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://fit365-eight.vercel.app/classes">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Fitness Classes - FIT365">
     <meta property="og:description" content="View and register for upcoming fitness classes at FIT365. Yoga, aerobics, strength training, and more in Blythewood, SC.">
     <meta property="og:url" content="https://fit365-eight.vercel.app/classes">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="FIT365">
+    <meta property="og:image" content="https://fit365-eight.vercel.app/assets/images/og-image.png">
 
     <!-- Twitter Card Tags -->
+    <meta name="twitter:image" content="https://fit365-eight.vercel.app/assets/images/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fitness Classes - FIT365">
     <meta name="twitter:description" content="View and register for upcoming fitness classes at FIT365. Yoga, aerobics, strength training, and more in Blythewood, SC.">
@@ -46,16 +51,18 @@
 
     <main>
         <!-- Page Hero -->
-        <section class="hero page-hero">
-            <div class="hero__background-placeholder">
-                <span>[Hero Image: Group fitness class in action]</span>
-            </div>
+        <section class="hero hero--full">
             <div class="container">
-                <div class="hero__content text-center" style="max-width: 100%;">
+                <div class="hero__content fade-in">
+                    <span class="hero__subtitle">Group Fitness</span>
                     <h1 class="hero__title">Upcoming Classes</h1>
                     <p class="hero__description">
                         Join our group fitness classes led by expert instructors. Reserve your spot today!
                     </p>
+                    <div class="hero__cta">
+                        <a href="/fitness#membership" class="btn btn--primary btn--lg">View Memberships</a>
+                        <a href="/contact" class="btn btn--secondary btn--lg">Contact Us</a>
+                    </div>
                 </div>
             </div>
         </section>

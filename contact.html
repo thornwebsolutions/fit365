@@ -9,14 +9,19 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://fit365-eight.vercel.app/contact">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Contact Us - FIT365 Premier Fitness Center & Event Showroom">
     <meta property="og:description" content="Contact FIT365 - Get in touch about memberships, fitness programs, event bookings, or general inquiries. Located in Blythewood, SC.">
     <meta property="og:url" content="https://fit365-eight.vercel.app/contact">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="FIT365">
+    <meta property="og:image" content="https://fit365-eight.vercel.app/assets/images/og-image.png">
 
     <!-- Twitter Card Tags -->
+    <meta name="twitter:image" content="https://fit365-eight.vercel.app/assets/images/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact Us - FIT365 Premier Fitness Center & Event Showroom">
     <meta name="twitter:description" content="Contact FIT365 - Get in touch about memberships, fitness programs, event bookings, or general inquiries. Located in Blythewood, SC.">
@@ -46,16 +51,18 @@
 
     <main>
         <!-- Page Hero -->
-        <section class="hero page-hero">
-            <div class="hero__background-placeholder">
-                <span>[Hero Image: Welcoming facility entrance]</span>
-            </div>
+        <section class="hero hero--full">
             <div class="container">
-                <div class="hero__content text-center" style="max-width: 100%;">
+                <div class="hero__content fade-in">
+                    <span class="hero__subtitle">Connect With Us</span>
                     <h1 class="hero__title">Get in Touch</h1>
                     <p class="hero__description">
                         We'd love to hear from you. Reach out with questions about memberships, programs, events, or anything else.
                     </p>
+                    <div class="hero__cta">
+                        <a href="#contact-form" class="btn btn--primary btn--lg">Send Message</a>
+                        <a href="tel:+18034042585" class="btn btn--secondary btn--lg">Call Us</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -72,7 +79,7 @@
                         </div>
                         <h4 class="contact-card__title">Visit Us</h4>
                         <div class="contact-card__info">
-                            <p>11031 Wilson Blvd Suite C & D</p>
+                            <p>11031 Wilson Blvd<br>Suite C & D</p>
                             <p>Blythewood, SC 29016</p>
                         </div>
                     </div>
@@ -86,7 +93,7 @@
                         <h4 class="contact-card__title">Call Us</h4>
                         <div class="contact-card__info">
                             <p><a href="tel:+18034042585">(803) 404-2585</a></p>
-                            <p class="text-light">Mon-Fri: 5am - 10pm</p>
+                            <p class="text-light">Mon - Fri: 6:00 am – 8:00 pm</p>
                         </div>
                     </div>
 
@@ -110,8 +117,9 @@
                         </div>
                         <h4 class="contact-card__title">Hours</h4>
                         <div class="contact-card__info">
-                            <p>Mon-Fri: 5am - 10pm</p>
-                            <p>Sat-Sun: 7am - 8pm</p>
+                            <p>Mon - Fri: 6:00 am – 8:00 pm</p>
+                            <p>Saturday: 6:00 am – 2:00 pm</p>
+                            <p>Sunday: Closed</p>
                         </div>
                     </div>
                 </div>
@@ -119,7 +127,7 @@
         </section>
 
         <!-- Contact Form & Map Section -->
-        <section class="section section--alt">
+        <section class="section section--alt" id="contact-form">
             <div class="container">
                 <div class="grid grid-2 gap-xl">
                     <!-- Contact Form -->
@@ -190,14 +198,16 @@
                             Conveniently located in the heart of Blythewood, SC. Stop by for a tour!
                         </p>
 
-                        <div class="map-placeholder">
-                            <div style="text-align: center;">
-                                <svg viewBox="0 0 24 24" fill="var(--color-text-light)" width="48" height="48" style="margin-bottom: var(--space-md);">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                                <p>[Google Maps Embed]</p>
-                                <p>11031 Wilson Blvd Suite C & D, Blythewood, SC 29016</p>
-                            </div>
+                        <div class="map-container" style="border-radius: var(--radius-lg); overflow: hidden;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.0!2d-80.98470!3d34.21420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88569e4a1f11cdd1%3A0x5c6c0e2c5f9c0e5a!2s11031%20Wilson%20Blvd%2C%20Blythewood%2C%20SC%2029016!5e0!3m2!1sen!2sus!4v1702300000000!5m2!1sen!2sus"
+                                width="100%"
+                                height="400"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
 
                     </div>

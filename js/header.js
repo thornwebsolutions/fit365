@@ -26,7 +26,7 @@
         <div class="container">
             <div class="header__inner">
                 <a href="/" class="header__logo">
-                    <span class="header__logo-text">FIT<span class="text-secondary">365</span></span>
+                    <span class="header__logo-text">FIT.<span class="text-secondary">365</span></span>
                 </a>
 
                 <nav class="nav" id="nav">

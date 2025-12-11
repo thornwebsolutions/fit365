@@ -152,6 +152,16 @@
         --container-padding: 1rem;
     }
 
+    /* Hero mobile padding */
+    .hero--full .container {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Events page - center included rental checklist */
+    .included-rental .flex {
+        justify-content: center;
+    }
+
     /* Typography */
     h1 {
         font-size: var(--text-4xl);
@@ -241,6 +251,16 @@
     }
 
     .footer__social {
+        justify-content: center;
+    }
+
+    .footer__contact-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__contact-item {
         justify-content: center;
     }
 

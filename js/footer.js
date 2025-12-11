@@ -12,7 +12,7 @@
                 <!-- Brand Column -->
                 <div class="footer__brand">
                     <a href="/" class="footer__logo">
-                        <span class="footer__logo-text">FIT<span class="text-secondary">365</span></span>
+                        <span class="footer__logo-text">FIT.<span class="text-secondary">365</span></span>
                     </a>
                     <p class="footer__tagline">Strengthening Body, Mind & Spirit</p>
                     <p class="footer__description">
@@ -55,7 +55,7 @@
                     <ul class="footer__list">
                         <li><a href="/classes">Personal Training</a></li>
                         <li><a href="/classes">Group Classes</a></li>
-                        <li><a href="/classes">Yoga & Pilates</a></li>
+                        <li><a href="/classes">Worshipcize</a></li>
                         <li><a href="/classes">Nutrition Counseling</a></li>
                         <li><a href="/fitness#membership">Memberships</a></li>
                     </ul>
