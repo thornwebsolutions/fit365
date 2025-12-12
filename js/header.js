@@ -10,7 +10,6 @@
             { href: '/', label: 'Home', page: 'index' },
             { href: '/about', label: 'About', page: 'about' },
             { href: '/fitness', label: 'Fitness', page: 'fitness' },
-            { href: '/events', label: 'Events', page: 'events' },
             { href: '/shop', label: 'Shop', page: 'shop' }
         ];
 

@@ -207,12 +207,6 @@
             new FormValidator(contactForm);
         }
 
-        // Event inquiry form
-        const eventForm = document.getElementById('eventInquiryForm');
-        if (eventForm) {
-            new FormValidator(eventForm);
-        }
-
         // Set minimum date for date inputs (today)
         const dateInputs = document.querySelectorAll('input[type="date"]');
         const today = new Date().toISOString().split('T')[0];
